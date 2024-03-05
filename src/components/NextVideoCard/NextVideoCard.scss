@@ -8,6 +8,7 @@
   padding: 4px 8px;
 
   &__img-container {
+    display: flex;
     width: 40%;
   }
 
@@ -17,6 +18,7 @@
   }
 
   &__details-container {
+    width: 60%;
     margin-left: 30px;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,18 @@
+
+.nv-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+
+    &__title {
+        padding: 8px;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0px;
+    }
+}
