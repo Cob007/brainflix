@@ -11,11 +11,20 @@
         padding: 8px;
         font-size: 1.3rem;
         margin: 0;
+        font-weight: 500;
         color: $primary-color-silver;
     }
 
     &__list {
         list-style-type: none;
         padding: 0px;
+
+        @include tablet {
+            width: 50%;
+        }
+    }
+    
+    &__item {
+        margin: 8px 0;
     }
 }
