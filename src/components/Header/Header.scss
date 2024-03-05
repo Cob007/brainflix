@@ -1,0 +1,80 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    background-color: $secondary-color-alabaster;
+
+    @include tablet {
+        flex-direction: row;
+    }
+
+    &__logo-container {
+        width: 100%; 
+        display: flex;
+        justify-content: center;
+
+        @include tablet {
+            width: 30%;
+        }
+    }
+
+    &__logo {
+        width: 30%;
+    }
+
+    &__search-pp {
+        display: flex;
+        flex-direction: row;
+        padding: 16px;
+    }
+
+    &__search-container {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        border: 2px solid $secondary-color-mercury;
+        border-radius: 10px;
+        padding: 8px;
+        align-items: center;
+    }
+
+    &__search-icon {
+        width: 35px;
+        margin: 0 16px;
+    }
+
+    &__search-input {
+        width: 70vw;
+        border: 0px;
+        font-size: 1.2rem;
+        font-family: "Avenir";
+        font-weight: 400;
+        color: $secondary-color-darkblack;
+        background-color: transparent;
+    }
+
+    &__search-input::placeholder {
+        font-size: 1.4rem;
+        font-family: "Avenir";
+        font-weight: 400;
+        color: $secondary-color-darkblack;
+    }
+
+    &__pp-container {
+        display: flex;
+        width: 100px;
+        padding: 8px;
+        justify-content: center;
+    }
+
+    &__pp {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: left;
+    }
+}
