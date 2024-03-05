@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
 
 .nv-container {
     display: flex;
@@ -7,8 +9,9 @@
 
     &__title {
         padding: 8px;
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         margin: 0;
+        color: $primary-color-silver;
     }
 
     &__list {

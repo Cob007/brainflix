@@ -5,7 +5,7 @@ const NextVideo = (props) => {
   const { videoList } = props;
   return (
     <div className="nv-container">
-      <p className="nv-container__title">Next Video</p>
+      <p className="nv-container__title">NEXT VIDEOS</p>
       <ul className="nv-container__list">
         {videoList.map((videoItem, index) => (
           <li className="nv-container__item" key={index}>
