@@ -1,0 +1,37 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 4px 8px;
+
+  &__img-container {
+    display: flex;
+    width: 40%;
+  }
+
+  &__img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  &__details-container {
+    width: 60%;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    color: $secondary-color-darkblack;
+  }
+
+  &__channel {
+    font-size: 1rem;
+    color: $primary-color-black;
+  }
+}

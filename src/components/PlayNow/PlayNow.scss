@@ -1,0 +1,23 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.playnow-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    background-color: $secondary-color-darkblack;
+    justify-content: center;
+
+    &__video {
+        display: flex;
+        width: 100%;
+
+        @include tablet {
+            width: 80%;
+        }
+
+        @include desktop {
+            width: 60%;
+        }
+    }
+}
