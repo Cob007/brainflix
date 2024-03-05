@@ -17,5 +17,9 @@
     &__list {
         list-style-type: none;
         padding: 0px;
+
+        @include tablet {
+            width: 50%;
+        }
     }
 }
