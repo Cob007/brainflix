@@ -2,6 +2,7 @@ import "./Header.scss";
 import brainflixLogo from "../../assets/icons/Logo/BrainFlix-logo.svg";
 import profilePicture from "../../assets/images/Mohan-muruge.jpg";
 import SearchIcon from "../../assets/icons/search.svg";
+import UploadIcon from "../../assets/icons/upload.svg";
 
 const Header = () => {
   return (
@@ -16,8 +17,11 @@ const Header = () => {
       <div className="header__search-pp">
         <div className="header__search-container">
           <span>
-            <img className="header__search-icon"
-             src={SearchIcon} alt="search icon" />
+            <img
+              className="header__search-icon"
+              src={SearchIcon}
+              alt="search icon"
+            />
           </span>
           <input className="header__search-input" placeholder="Search" />
         </div>
@@ -31,7 +35,10 @@ const Header = () => {
       </div>
 
       <div className="header__upload-container">
-        <button className="header__upload-btn">Upload</button>
+        <span className="header__icon-cont" >
+          <img className="header__upload-icon" src={UploadIcon} alt="upload icon" />
+        </span>
+        <button className="header__upload-btn">UPLOAD</button>
       </div>
     </nav>
   );
