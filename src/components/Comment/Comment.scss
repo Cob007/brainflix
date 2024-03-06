@@ -1,0 +1,24 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  &__count {
+    margin: 0 16px;
+    padding: 16px 8px;
+  }
+
+  &__comment-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__divider {
+    height: 2px;
+    background-color: $secondary-color-mercury;
+    margin: 0 16px;
+
+  }
+}
