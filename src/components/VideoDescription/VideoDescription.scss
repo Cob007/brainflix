@@ -1,0 +1,86 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.vd-container {
+    display: flex;
+    padding: 24px;
+    flex-direction: column;
+
+    &__title {
+        font-size: 3rem;
+        margin: 16px 0;
+    }
+
+    &__divider {
+        width: 100%;
+        height: 2px;
+        background-color: $secondary-color-mercury;
+    }
+
+    &__invisible {
+        @include tablet {
+            display: none
+        }
+    }
+
+    &__analytics {
+        display: flex;
+        flex-direction: row;
+        margin: 16px 0;
+
+        @include tablet {
+            justify-content: space-between;
+        }
+    }
+
+    &__date-author, &__views-like  {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+        }
+    }
+
+    &__views-like {
+        margin-left: 20%;
+    }
+
+    &__author {
+        color: $secondary-color-darkblack;
+        margin: 8px 0;
+    }
+
+    &__date {
+        font-size: 1.2rem;
+        color: $primary-color-silver;
+        margin: 8px 0;
+
+        @include tablet {
+            margin: 8px 24px;
+        }
+    }
+
+    &__views, &__likes {
+        display: flex;
+        flex-direction: row;
+        margin: 8px 0;
+        @include tablet {
+            margin: 8px 24px;
+        }
+    }
+
+    &__views-icon, &__likes-icon {
+        width: 35px;
+    }
+
+    &__likes-text, &__views-text {
+        font-size: 1.4rem;
+        margin: 0 0 0 24px;
+        color: $primary-color-silver;
+    }
+
+    &__desp-text {
+        font-size: 1.4rem;
+    }
+}
