@@ -6,12 +6,20 @@
   flex-direction: row;
   width: 100%;
   padding: 4px 8px;
+  margin: 24px 0;
+
+  @include tablet {
+    width: 30vw;
+  }
+
 
   &__img-container {
     display: flex;
     width: 40%;
 
-    
+    @include tablet {
+        width: 40%;
+    }
   }
 
   &__img {
@@ -21,10 +29,13 @@
 
   &__details-container {
     width: 60%;
-    margin-left: 30px;
+    margin-left: 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include tablet {
+        margin-left: 8px;
+    }
   }
 
   &__title {
@@ -32,6 +43,9 @@
     color: $secondary-color-darkblack;
     padding: 0;
     margin: 0;
+    @include tablet {
+        font-size: 1rem;
+    }
   }
 
   &__channel {
@@ -39,5 +53,9 @@
     color: $primary-color-black;
     padding: 0;
     margin: 0;
+
+    @include tablet {
+        font-size: 1rem;
+    }
   }
 }

@@ -4,7 +4,7 @@
 .nv-container {
     display: flex;
     flex-direction: column;
-    padding: 0px;
+    padding: 16px;
     margin: 0px;
 
     &__title {
@@ -13,15 +13,17 @@
         margin: 0;
         font-weight: 500;
         color: $primary-color-silver;
+
+        @include tablet {
+            font-size: 1rem;
+            margin-top: 24px;
+        }
     }
 
     &__list {
         list-style-type: none;
         padding: 0px;
-
-        @include tablet {
-            width: 50%;
-        }
+        margin: 0;
     }
     
     &__item {
