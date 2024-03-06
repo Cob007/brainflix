@@ -1,0 +1,10 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+
+    &__count {
+        margin: 0 16px;
+        padding: 16px 8px;
+        
+    }
+}
