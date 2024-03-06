@@ -3,17 +3,20 @@
 
 .vd-container {
     display: flex;
-    padding: 24px;
+    padding: 24px 0;
     flex-direction: column;
 
     &__title {
         font-size: 3rem;
         margin: 16px 0;
+        padding: 0 24px;
+
+
     }
 
     &__divider {
         width: 100%;
-        height: 2px;
+        height: 1px;
         background-color: $secondary-color-mercury;
     }
 
@@ -25,17 +28,20 @@
 
     &__analytics {
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
         margin: 16px 0;
 
         @include tablet {
             justify-content: space-between;
+
         }
     }
 
     &__date-author, &__views-like  {
         display: flex;
         flex-direction: column;
+        padding: 0 24px;
+
 
         @include tablet {
             flex-direction: row;
@@ -43,10 +49,11 @@
     }
 
     &__views-like {
-        margin-left: 20%;
+        margin-left:0;
     }
 
     &__author {
+        display: flex;
         color: $secondary-color-darkblack;
         margin: 8px 0;
     }
@@ -72,6 +79,9 @@
 
     &__views-icon, &__likes-icon {
         width: 35px;
+        @include tablet {
+            width: 20px;
+        }
     }
 
     &__likes-text, &__views-text {
@@ -81,6 +91,11 @@
     }
 
     &__desp-text {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        padding: 0 24px;
+
+        @include tablet {
+            font-size: 1rem;
+        }
     }
 }

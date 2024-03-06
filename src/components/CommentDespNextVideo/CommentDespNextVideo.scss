@@ -1,0 +1,44 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.group-container {
+    display: flex;
+    flex-direction: column;
+
+
+    @include desktop {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__desp-comment {
+        @include tablet {
+            width: 100%;
+        }
+        
+        @include desktop {
+            width: 60%;
+        }
+
+    }
+
+    &__divider {
+        display: none;
+
+        @include desktop {
+            display: inline;
+            width: 1px;
+            background-color: $secondary-color-mercury;
+        }
+    }
+
+    &__next-videos {
+        @include tablet {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
+    }
+}
