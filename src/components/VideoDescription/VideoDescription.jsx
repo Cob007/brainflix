@@ -12,8 +12,7 @@ const VideoDescription = (props) => {
       <section className="vd-container__analytics">
         <div className="vd-container__date-author">
           <h3 className="vd-container__author">
-            <span>By  </span>
-            {clickedVideo.channel}
+            By {clickedVideo.channel}
           </h3>
           <p className="vd-container__date">{DateConverter(clickedVideo.timestamp)}</p>
         </div>

@@ -5,17 +5,15 @@
     display: flex;
     flex-direction: column;
 
-    @include tablet {
-        flex-direction: row;
-    }
 
     @include desktop {
+        flex-direction: row;
         justify-content: center;
     }
 
     &__desp-comment {
         @include tablet {
-            width: 65%;
+            width: 100%;
         }
         
         @include desktop {
@@ -27,16 +25,16 @@
     &__divider {
         display: none;
 
-        @include tablet {
+        @include desktop {
             display: inline;
-            width: 2px;
+            width: 1px;
             background-color: $secondary-color-mercury;
         }
     }
 
     &__next-videos {
         @include tablet {
-            width: 35%;
+            width: 50%;
         }
 
         @include desktop {
