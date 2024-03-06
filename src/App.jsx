@@ -4,6 +4,7 @@ import videos from "./data/videos.json";
 import videoDetails from "./data/video-details.json";
 import NextVideo from "./components/NextVideo/NextVideo";
 import PlayNow from "./components/PlayNow/PlayNow";
+import VideoDescription from "./components/VideoDescription/VideoDescription";
 
 const App = () => {
   console.log("videos :", videos);
@@ -13,6 +14,7 @@ const App = () => {
     <div className="container">
       <Header />
       <PlayNow videoClicked={videos[0]}/>
+      <VideoDescription clickedVideo={videoDetails[0]}/>
       <NextVideo videoList={videos}/>
     </div>
   );
