@@ -8,16 +8,11 @@ import CommentDespNextVideo from "./components/CommentDespNextVideo/CommentDespN
 
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
-
-  console.log(videos)
-  console.log(videoDetails)
-
-
-
-  const handleClick = async (videoId) => {
-    const selectVideo = await videoDetails.find((video) => video.id === videoId);
-    console.log("Selected video : ", selectVideo);
-    setSelectedVideo(prev => selectVideo);
+  const handleClick =  (videoId) => {
+    const selectVideo =  videoDetails.find(
+      (video) => video.id === videoId
+    );
+    setSelectedVideo((prev) => selectVideo);
   };
 
   return (

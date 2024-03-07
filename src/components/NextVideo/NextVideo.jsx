@@ -1,20 +1,22 @@
 import NextVideoCard from "../NextVideoCard/NextVideoCard";
-import './NextVideo.scss'
+import "./NextVideo.scss";
 
 const NextVideo = (props) => {
-  const { selectedVideo, videoList, handleClick} = props;
+  const { selectedVideo, videoList, handleClick } = props;
+
+  const nextVidoes = videoList.map((videoItem) =>
+    videoItem.id === selectedVideo.id ? (
+      <div key={videoItem.id}></div>
+    ) : (
+      <li key={videoItem.id} className="nv-container__item">
+        <NextVideoCard video={videoItem} handleClick={handleClick} />
+      </li>
+    )
+  );
   return (
     <div className="nv-container">
       <p className="nv-container__title">NEXT VIDEOS</p>
-      <ul className="nv-container__list">
-        {videoList.map((videoItem, index) => (
-            videoItem.id === selectedVideo.id ? <></> :
-          <li className="nv-container__item"
-             key={index}>
-            <NextVideoCard video={videoItem} handleClick={handleClick} />
-          </li>
-        ))}
-      </ul>
+      <ul className="nv-container__list">{nextVidoes}</ul>
     </div>
   );
 };
