@@ -9,12 +9,11 @@ const CommentDespNextVideo = (props) => {
   return (
     <div className="group-container">
       <div className="group-container__desp-comment">
-        <VideoDescription clickedVideo={videoDetails[0]} />
-        <Comment commentList={videoDetails[0].comments} />
+        <VideoDescription clickedVideo={videoDetails} />
+        <Comment commentList={videoDetails.comments} />
       </div>
-      <div className="group-container__divider"/>
       <div className="group-container__next-videos">
-        <NextVideo videoList={videos} />
+        <NextVideo selectedVideo={videoDetails} videoList={videos}  handleClick={handleClick}/>
       </div>
     </div>
   );

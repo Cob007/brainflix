@@ -7,21 +7,26 @@ import { useState } from "react";
 import CommentDespNextVideo from "./components/CommentDespNextVideo/CommentDespNextVideo";
 
 const App = () => {
-  const [selectedVideo, setSelectedVideo] = useState({});
-  //currentVideo
+  const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
 
-  const handleClick = (video) => {
+  console.log(videos)
+  console.log(videoDetails)
 
 
+
+  const handleClick = async (videoId) => {
+    const selectVideo = await videoDetails.find((video) => video.id === videoId);
+    console.log("Selected video : ", selectVideo);
+    setSelectedVideo(prev => selectVideo);
   };
 
   return (
     <div className="container">
       <Header />
-      <PlayNow videoClicked={videos[0]} />
+      <PlayNow videoClicked={selectedVideo} />
       <CommentDespNextVideo
         videos={videos}
-        videoDetails={videoDetails}
+        videoDetails={selectedVideo}
         handleClick={handleClick}
       />
     </div>
