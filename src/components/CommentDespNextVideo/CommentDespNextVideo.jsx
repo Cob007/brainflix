@@ -13,7 +13,7 @@ const CommentDespNextVideo = (props) => {
         <Comment commentList={videoDetails.comments} />
       </div>
       <div className="group-container__next-videos">
-        <NextVideo videoList={videos}  handleClick={handleClick}/>
+        <NextVideo selectedVideo={videoDetails} videoList={videos}  handleClick={handleClick}/>
       </div>
     </div>
   );

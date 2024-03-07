@@ -23,7 +23,7 @@ const App = () => {
   return (
     <div className="container">
       <Header />
-      <PlayNow videoClicked={videos[0]} />
+      <PlayNow videoClicked={selectedVideo} />
       <CommentDespNextVideo
         videos={videos}
         videoDetails={selectedVideo}
