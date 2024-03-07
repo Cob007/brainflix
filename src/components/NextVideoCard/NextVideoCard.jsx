@@ -1,9 +1,16 @@
 import "./NextVideoCard.scss";
 
 const NextVideoCard = (props) => {
-  const { video } = props;
+  const { video, handleClick} = props;
+
+  const click = () => {
+    handleClick(video.id)
+  }
+
   return (
-    <div className="card">
+    <div 
+    onClick={click}
+    className="card">
       <div className="card__img-container">
         <img
           className="card__img"
