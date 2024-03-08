@@ -46,7 +46,7 @@
     padding: 16px;
 
     @include tablet {
-      width: 30%;
+      width: 28%;
     }
 
     @include desktop {
@@ -64,7 +64,7 @@
     align-items: center;
 
     @include tablet {
-        width: 100%;
+      width: 100%;
     }
   }
 
@@ -81,6 +81,11 @@
     font-weight: 400;
     color: $secondary-color-darkblack;
     background-color: transparent;
+
+    @include tablet {
+      width: 40%;
+    }
+    
   }
 
   &__search-input::placeholder {
@@ -105,7 +110,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      margin: 30px 10px;
+      margin: 25px 0;
     }
 
     @include desktop {
@@ -136,7 +141,7 @@
 
     @include tablet {
       width: 20%;
-      margin-left: 20px;
+      margin-left: 10px;
     }
 
     @include desktop {
