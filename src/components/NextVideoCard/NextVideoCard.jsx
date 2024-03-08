@@ -9,7 +9,9 @@ const NextVideoCard = (props) => {
 
   return (
     <div 
-    onClick={click}
+    onClick={() => 
+        {handleClick(video.id)}
+    }
     className="card">
       <div className="card__img-container">
         <img
