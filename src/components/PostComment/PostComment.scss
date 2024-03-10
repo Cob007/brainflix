@@ -1,0 +1,148 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.post-comment {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 16px 0;
+
+  @include tablet {
+    margin: 24px 0;
+  }
+
+
+  &__pp-container {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+
+    @include tablet {
+        width: 15%;
+        justify-content:center;
+        align-items: last baseline;
+    }
+
+  }
+  &__pp {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: left;
+    background-color: $secondary-color-mercury;
+  }
+
+  &__add-comment {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 0 24px;
+
+
+    @include tablet {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include tablet {
+        width: 60%;
+    }
+
+  }
+
+  &__title {
+    color: $primary-color-silver;
+    margin: 0;
+    font-size: 1.2rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__textarea {
+    display: flex;
+    height: 150px;
+    font-size: 1rem;
+    padding: 16px;
+    border: 2px solid $secondary-color-mercury;
+    background-color: $secondary-color-alabaster;
+    border-radius: 5px;
+    margin-top: 16px;
+    font-family: "Avenir";
+
+    @include tablet {
+        height: 30px;
+        font-size: 1.2rem;
+
+    }
+  }
+
+  &__textarea::placeholder {
+    font-family: "Avenir";
+    font-size: 1.1rem;
+    color: $primary-color-black;
+    @include tablet {
+      font-size: 1.3rem;
+
+    }
+  }
+
+  &__textarea:focus {
+    outline: none !important;
+    border: 1px solid $primary-color-black;
+  }
+
+  &__upload-container {
+    display: flex;
+    flex-direction: row;
+    background-color: $primary-color-blue;
+    border: 0;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      width: 30%;
+      height: 50px;
+      margin: 0 24px;
+      align-self: last baseline;
+
+    }
+  }
+
+  &__upload-container:hover {
+    background-color: $secondary-color-darkblue;
+  }
+
+  &__upload-icon {
+    width: 20px;
+    @include tablet {
+      width: 25px;
+    }
+  }
+
+  &__upload-btn {
+    width: 100%;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $primary-color-white;
+
+    @include desktop {
+      font-size: 1.4rem;
+    }
+  }
+}

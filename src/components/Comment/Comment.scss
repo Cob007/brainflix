@@ -1,0 +1,30 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.comment {
+  display: flex;
+  flex-direction: column;
+
+  &__count {
+    margin: 0 16px;
+    padding: 16px 0;
+    font-size: 1rem;
+
+    @include tablet {
+      margin: 0 24px;
+      font-size: 1.3rem;
+    }
+  }
+
+  &__comment-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__divider {
+    height: 1px;
+    background-color: $secondary-color-mercury;
+    margin: 0;
+
+  }
+}

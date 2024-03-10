@@ -1,0 +1,32 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.nv-container {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 0px;
+
+    &__title {
+        padding: 8px;
+        font-size: 1rem;
+        margin: 0;
+        font-weight: 500;
+        color: $primary-color-silver;
+
+        @include tablet {
+            font-size: 1.2rem;
+            margin-top: 24px;
+        }
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0px;
+        margin: 0;
+    }
+    
+    &__item {
+        margin: 8px 0;
+    }
+}

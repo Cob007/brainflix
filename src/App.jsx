@@ -1,35 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.scss'
+import "./App.scss";
+import Header from "./components/Header/Header";
+import videos from "./data/videos.json";
+import videoDetails from "./data/video-details.json";
+import PlayNow from "./components/PlayNow/PlayNow";
+import { useState } from "react";
+import CommentDespNextVideo from "./components/CommentDespNextVideo/CommentDespNextVideo";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
+  const handleClick =  (videoId) => {
+    const selectVideo =  videoDetails.find(
+      (video) => video.id === videoId
+    );
+    setSelectedVideo((prev) => selectVideo);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <div className="container">
+      <Header />
+      <PlayNow videoClicked={selectedVideo} />
+      <CommentDespNextVideo
+        videos={videos}
+        videoDetails={selectedVideo}
+        handleClick={handleClick}
+      />
+    </div>
+  );
+};
 
-export default App
+export default App;
