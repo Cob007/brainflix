@@ -23,7 +23,11 @@ const Header = () => {
               alt="search icon"
             />
           </span>
-          <input className="header__search-input" placeholder="Search" />
+          <input
+            type="text"
+            className="header__search-input"
+            placeholder="Search"
+          />
         </div>
         <div className="header__pp-container">
           <img
@@ -35,9 +39,11 @@ const Header = () => {
       </div>
 
       <div className="header__upload-container">
-        <span className="header__icon-cont" >
-          <img className="header__upload-icon" src={UploadIcon} alt="upload icon" />
-        </span>
+        <img
+          className="header__upload-icon"
+          src={UploadIcon}
+          alt="upload icon"
+        />
         <button className="header__upload-btn">UPLOAD</button>
       </div>
     </nav>
