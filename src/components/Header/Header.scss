@@ -158,6 +158,10 @@
     }
   }
 
+  &__upload-container:hover {
+    background-color: $secondary-color-darkblue;
+  }
+
   &__upload-icon {
     width: 20px;
     @include tablet {
