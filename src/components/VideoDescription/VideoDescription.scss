@@ -6,12 +6,24 @@
     padding: 24px 0;
     flex-direction: column;
 
+    @include tablet  {
+        padding: 36px 0;
+    }
+
     &__title {
-        font-size: 3rem;
-        margin: 16px 0;
-        padding: 0 24px;
+        font-size: 1.5rem;
+        margin: 0 16px 8px 16px;
+        padding: 0;
+        font-weight: 700;
+        line-height: 2rem;
 
 
+        @include tablet {
+            font-size: 2.1rem;
+            line-height: 3rem;
+            margin: 0 24px 12px 24px;
+
+        }
     }
 
     &__divider {
@@ -29,10 +41,11 @@
     &__analytics {
         display: flex;
         flex-direction: row; 
-        margin: 16px 0;
+        margin: 8px 0;
 
         @include tablet {
             justify-content: space-between;
+            margin: 12px;
 
         }
     }
@@ -40,31 +53,43 @@
     &__date-author, &__views-like  {
         display: flex;
         flex-direction: column;
-        padding: 0 24px;
-
+        padding: 0 16px;
+        justify-content: space-evenly;
 
         @include tablet {
             flex-direction: row;
+            align-items: center;
         }
     }
 
     &__views-like {
-        margin-left:0;
+        margin-left:  50px;
     }
 
     &__author {
         display: flex;
         color: $secondary-color-darkblack;
         margin: 8px 0;
+        font-size: 1rem;
+        font-weight: 700;
+        @include tablet {
+            font-size: 1.2rem;
+
+        }
     }
 
     &__date {
+        display: flex;
         font-size: 1.2rem;
         color: $primary-color-silver;
         margin: 8px 0;
+        font-size: 1rem;
+        padding: 0;
 
         @include tablet {
-            margin: 8px 24px;
+            margin: 0 24px;
+            padding: 0;
+            font-size: 1.1rem;
         }
     }
 
@@ -78,24 +103,29 @@
     }
 
     &__views-icon, &__likes-icon {
-        width: 35px;
+        width: 20px;
         @include tablet {
-            width: 20px;
+            width: 25px;
         }
     }
 
     &__likes-text, &__views-text {
-        font-size: 1.4rem;
+        font-size: 1rem;
         margin: 0 0 0 24px;
         color: $primary-color-silver;
     }
 
     &__desp-text {
         font-size: 1.2rem;
-        padding: 0 24px;
+        padding: 0 16px;
+        margin: 8px 0;
+        line-height: 30px;
+        color: $primary-color-black;
 
         @include tablet {
-            font-size: 1rem;
+            font-size: 1.2rem;
+            padding: 0 24px;
+            margin: 12px 0;
         }
     }
 }

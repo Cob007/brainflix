@@ -7,7 +7,13 @@
 
   &__count {
     margin: 0 16px;
-    padding: 16px 8px;
+    padding: 16px 0;
+    font-size: 1rem;
+
+    @include tablet {
+      margin: 0 24px;
+      font-size: 1.3rem;
+    }
   }
 
   &__comment-list {

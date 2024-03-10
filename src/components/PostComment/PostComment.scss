@@ -5,6 +5,11 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  margin: 16px 0;
+
+  @include tablet {
+    margin: 24px 0;
+  }
 
 
   &__pp-container {
@@ -25,6 +30,7 @@
     border-radius: 50%;
     object-fit: cover;
     object-position: left;
+    background-color: $secondary-color-mercury;
   }
 
   &__add-comment {
@@ -54,12 +60,17 @@
   &__title {
     color: $primary-color-silver;
     margin: 0;
+    font-size: 1.2rem;
+
+    @include tablet {
+      font-size: 1.5rem;
+    }
   }
 
   &__textarea {
     display: flex;
     height: 150px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 16px;
     border: 2px solid $secondary-color-mercury;
     background-color: $secondary-color-alabaster;
@@ -69,13 +80,19 @@
 
     @include tablet {
         height: 30px;
+        font-size: 1.2rem;
+
     }
   }
 
   &__textarea::placeholder {
     font-family: "Avenir";
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     color: $primary-color-black;
+    @include tablet {
+      font-size: 1.3rem;
+
+    }
   }
 
   &__textarea:focus {
@@ -88,8 +105,8 @@
     flex-direction: row;
     background-color: $primary-color-blue;
     border: 0;
+    height: 40px;
     border-radius: 10px;
-    font-size: 1.6rem;
     margin-top: 16px;
     padding: 8px 16px;
     align-items: center;
@@ -104,22 +121,28 @@
     }
   }
 
+  &__upload-container:hover {
+    background-color: $secondary-color-darkblue;
+  }
+
   &__upload-icon {
-    width: 40px;
+    width: 20px;
+    @include tablet {
+      width: 25px;
+    }
   }
 
   &__upload-btn {
     width: 100%;
-    height: 50px;
     background-color: transparent;
     border: 0;
     border-radius: 0;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: $primary-color-white;
 
     @include desktop {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
     }
   }
 }

@@ -9,13 +9,13 @@
 
     &__title {
         padding: 8px;
-        font-size: 1.3rem;
+        font-size: 1rem;
         margin: 0;
         font-weight: 500;
         color: $primary-color-silver;
 
         @include tablet {
-            font-size: 1rem;
+            font-size: 1.2rem;
             margin-top: 24px;
         }
     }
