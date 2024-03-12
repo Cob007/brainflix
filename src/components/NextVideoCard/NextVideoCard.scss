@@ -1,6 +1,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
+.navlink {
+  list-style: none;
+}
 .card {
   display: flex;
   flex-direction: row;

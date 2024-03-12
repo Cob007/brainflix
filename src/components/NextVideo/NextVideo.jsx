@@ -9,7 +9,7 @@ const NextVideo = (props) => {
       <div key={videoItem.id}></div>
     ) : (
       <li key={videoItem.id} className="nv-container__item">
-        <NextVideoCard video={videoItem} handleClick={handleClick} />
+        <NextVideoCard video={videoItem} />
       </li>
     )
   );
