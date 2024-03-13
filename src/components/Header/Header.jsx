@@ -42,12 +42,16 @@ const Header = () => {
       </div>
 
       <div className="header__upload-container">
-        <img
-          className="header__upload-icon"
-          src={UploadIcon}
-          alt="upload icon"
-        />
-        <button className="header__upload-btn">UPLOAD</button>
+        <NavLink className="header__navlink-upload">
+          <div className="header__sub-upload">
+            <img
+              className="header__upload-icon"
+              src={UploadIcon}
+              alt="upload icon"
+            />
+            <button className="header__upload-btn">UPLOAD</button>
+          </div>
+        </NavLink>
       </div>
     </nav>
   );
