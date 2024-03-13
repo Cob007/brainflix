@@ -3,16 +3,19 @@ import brainflixLogo from "../../assets/icons/Logo/BrainFlix-logo.svg";
 import profilePicture from "../../assets/images/Mohan-muruge.jpg";
 import SearchIcon from "../../assets/icons/search.svg";
 import UploadIcon from "../../assets/icons/upload.svg";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
     <nav className="header">
       <div className="header__logo-container">
-        <img
-          className="header__logo"
-          src={brainflixLogo}
-          alt="brainflix logo"
-        />
+        <NavLink to={"/"} className="header__nav-link">
+          <img
+            className="header__logo"
+            src={brainflixLogo}
+            alt="brainflix logo"
+          />
+        </NavLink>
       </div>
       <div className="header__search-pp">
         <div className="header__search-container">
