@@ -26,8 +26,10 @@
     }
   }
 
-  &__logo {
+  &__nav-link {
+    display: flex;
     width: 30%;
+    justify-content: center;
 
     @include tablet {
       width: 20vh;
@@ -37,6 +39,19 @@
     @include desktop {
       width: 20vh;
       margin-left: 30%;
+    }
+  }
+  
+
+  &__logo {
+    width: 100%;
+
+    @include tablet {
+      width: 20vh;
+    }
+
+    @include desktop {
+      width: 20vh;
     }
   }
 
@@ -160,6 +175,20 @@
 
   &__upload-container:hover {
     background-color: $secondary-color-darkblue;
+  }
+
+  &__navlink-upload {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+  }
+
+  &__sub-upload{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
   }
 
   &__upload-icon {

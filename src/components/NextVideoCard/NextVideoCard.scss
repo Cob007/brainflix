@@ -2,8 +2,10 @@
 @use "../../styles/partials/variable" as *;
 
 .navlink {
-  list-style: none;
+  background-color: transparent;
+  text-decoration: none;
 }
+
 .card {
   display: flex;
   flex-direction: row;

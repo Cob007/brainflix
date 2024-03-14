@@ -11,13 +11,11 @@ const Videos = () => {
   const [selectedVideo, setSelectedVideo] = useState();
 
   const { videoId } = useParams();
-  console.log("videoId fron param  here: ", videoId);
 
   const getVideosDetails = async (videoId) => {
     try {
       const getVideosDetailsURL = `${baseURL}videos/${videoId}?api_key=${apiKey}`;
       const res = await axios.get(getVideosDetailsURL);
-      console.log(res.data);
       setSelectedVideo((prev) => res.data);
     } catch (err) {}
   };
@@ -26,19 +24,14 @@ const Videos = () => {
     try {
       const getVideosURL = `${baseURL}videos?api_key=${apiKey}`;
       const res = await axios.get(getVideosURL).then((result) => {
-        ///videos/:id
-        console.log(result);
         setVideosData((prev) => result.data);
         if(videoId !== undefined){
-            console.log("videoId : ", videoId);
             getVideosDetails(videoId)
         }else {
             getVideosDetails(result.data[0].id);
         }
       });
-    } catch (err) {
-      console.log("loadVideosFromRemote : ", err);
-    }
+    } catch (err) {}
   };
 
   useEffect(() => {
