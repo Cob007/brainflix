@@ -5,7 +5,6 @@ import UploadVideo from "./pages/UploadVideo/UploadVideo";
 import Header from "./components/Header/Header";
 
 const App = () => {
-  
 
   return (
     <BrowserRouter >

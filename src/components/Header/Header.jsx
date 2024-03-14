@@ -42,7 +42,7 @@ const Header = () => {
       </div>
 
       <div className="header__upload-container">
-        <NavLink className="header__navlink-upload">
+        <NavLink className="header__navlink-upload" to={'/upload'}>
           <div className="header__sub-upload">
             <img
               className="header__upload-icon"

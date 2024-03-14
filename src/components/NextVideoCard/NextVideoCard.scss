@@ -1,7 +1,7 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
-.navlink.active {
+.navlink {
   background-color: transparent;
   text-decoration: none;
 }
