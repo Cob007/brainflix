@@ -1,24 +1,27 @@
-import "./VideoUpload.scss";
-import videoThumbnail from "../../assets/images/Upload-video-preview.jpg";
 import VideoUploadForm from "../VideoUploadForm/VideoUploadForm";
-
+import VideoUploadSubmit from "../VideoUploadSubmit/VideoUploadSubmit";
+import VideoUploadThumbnail from "../VideoUploadThumbnail/VideoUploadThumbnail";
+import "./VideoUpload.scss";
 
 const VideoUpload = () => {
   return (
-    <section className="video-upload-cont">
+    <div className="video-upload">
       <h1>Upload Video </h1>
-      <p className="video-upload-cont__desp">VIDEO THUMBNAIL</p>
-      <div className="video-upload-cont__thumb-cont">
-        <img
-          className="video-upload-cont__img"
-          src={videoThumbnail}
-          alt="video upload thumbnail"
-        />
-      </div>
-      <VideoUploadForm />
 
-      
-    </section>
+      <div className="video-upload__top">
+        <div className="video-upload__left">
+          <VideoUploadThumbnail />
+        </div>
+        <div className="video-upload__right">
+          <VideoUploadForm />
+        </div>
+      </div>
+
+      <div className="video-upload__buttom">
+        <VideoUploadSubmit />
+      </div>
+    </div>
   );
 };
+
 export default VideoUpload;

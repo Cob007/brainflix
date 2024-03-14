@@ -1,0 +1,22 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.video-upload-cont {
+    display: flex;
+    flex-direction: column;
+
+    &__desp {
+        font-size: 1rem;
+        font-weight: 500;
+        color: $primary-color-silver;
+    }
+
+    &__thumb-cont {
+        border-radius: 15px;
+    }
+
+    &__img {
+        width: 100%;
+
+    }
+}

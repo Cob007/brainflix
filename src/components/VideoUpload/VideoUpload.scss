@@ -1,23 +1,56 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variable" as *;
 
-.video-upload-cont {
+.video-upload {
     display: flex;
     flex-direction: column;
     padding: 16px;
 
-    &__desp {
-        font-size: 1rem;
-        font-weight: 500;
-        color: $primary-color-silver;
+
+    @include desktop {
+        
+        width: 80vw;
+        justify-content: center;
+        margin: 0 auto;
     }
 
-    &__thumb-cont {
-        border-radius: 15px;
+    &__top {
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+            flex-direction: row;
+        }
     }
 
-    &__img {
-        width: 100%;
+    &__left {
+
+        @include tablet {
+            width: 40vw;
+        }
+
+        @include desktop {
+            width: 30%;
+        }
+    }
+
+
+    &__right {
+
+        
+        @include desktop {
+            width: 70%;
+            padding: 24px;
+        }
+    }
+
+    &__button {
+        @include desktop {
+            width: 100% ;
+        }
 
     }
+
+
+
 }

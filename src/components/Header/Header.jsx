@@ -13,7 +13,8 @@ const Header = () => {
           <img
             className="header__logo"
             src={brainflixLogo}
-            alt="brainflix logo"
+            alt="brainflix log
+            o"
           />
         </NavLink>
       </div>

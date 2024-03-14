@@ -22,8 +22,6 @@ const VideoUploadForm = () => {
                 placeholder='Add a description to your video'
             />
         </div>
-
-
     </div>
   );
 };
