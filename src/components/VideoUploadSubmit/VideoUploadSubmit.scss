@@ -1,0 +1,97 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.publish {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  @include tablet {
+    flex-direction: row-reverse;
+    justify-content:flex-start;
+  }
+
+  &__upload-container {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    background-color: $primary-color-blue;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0 16px;
+    align-items: center;
+
+    @include tablet {
+      width: 20%;
+      margin-left: 10px;
+    }
+
+    @include desktop {
+      width: 15%;
+      margin-left: 30px;
+    }
+  }
+
+  &__upload-container:hover {
+    background-color: $secondary-color-darkblue;
+  }
+
+  &__sub-upload {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  &__upload-icon {
+    width: 20px;
+    @include tablet {
+      width: 25px;
+    }
+  }
+
+  &__upload-btn {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: $primary-color-white;
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__cancel-container {
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    margin: 16px 0;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0 16px;
+    justify-content: center;
+
+    @include tablet {
+      width: 20%;
+      margin-left: 10px;
+    }
+
+    @include desktop {
+      width: 10%;
+      margin-left: 30px;
+    }
+  }
+
+  &__cancel-btn {
+    color: $secondary-color-darkblue;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}

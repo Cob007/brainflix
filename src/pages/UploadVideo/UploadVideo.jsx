@@ -1,8 +1,10 @@
+import VideoUpload from "../../components/VideoUpload/VideoUpload";
+
 const UploadVideo = () => {
   return (
-    <div>
-      <h1>Welcome to Upload Video</h1>
-    </div>
+    <>
+      <VideoUpload />
+    </>
   );
 };
 export default UploadVideo;
