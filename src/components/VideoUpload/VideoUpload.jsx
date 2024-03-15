@@ -7,7 +7,7 @@ const VideoUpload = () => {
   return (
     <div className="video-upload">
       <h1>Upload Video </h1>
-
+      <div className="video-upload__divider" />
       <div className="video-upload__top">
         <div className="video-upload__left">
           <VideoUploadThumbnail />
@@ -16,7 +16,7 @@ const VideoUpload = () => {
           <VideoUploadForm />
         </div>
       </div>
-
+      <div className="video-upload__divider" />
       <div className="video-upload__buttom">
         <VideoUploadSubmit />
       </div>

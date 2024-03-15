@@ -4,7 +4,6 @@
 .cont-form-upload {
   display: flex;
   flex-direction: column;
-
   &__title-div,
   &__desp-div {
     display: flex;
@@ -24,7 +23,7 @@
     padding: 16px;
     border: 1px solid $primary-color-silver;
     border-radius: 10px;
-    height: 50px;
+    height: 40px;
     margin: 8px 0;
     background-color: $secondary-color-alabaster;
   }
@@ -37,7 +36,7 @@
   }
 
   &__desp {
-    height: 100px;
+    height: 90px;
     justify-content: flex-start;
 
   }
