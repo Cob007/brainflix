@@ -1,9 +1,19 @@
+import { useNavigate } from "react-router-dom";
 import VideoUploadForm from "../VideoUploadForm/VideoUploadForm";
 import VideoUploadSubmit from "../VideoUploadSubmit/VideoUploadSubmit";
 import VideoUploadThumbnail from "../VideoUploadThumbnail/VideoUploadThumbnail";
 import "./VideoUpload.scss";
 
 const VideoUpload = () => {
+
+  const  navigate  = useNavigate()
+
+  const handleClick = () => {
+    alert("upload!!");
+    navigate('/');
+  }
+
+
   return (
     <div className="video-upload">
       <h1>Upload Video </h1>
@@ -18,7 +28,7 @@ const VideoUpload = () => {
       </div>
       <div className="video-upload__divider" />
       <div className="video-upload__buttom">
-        <VideoUploadSubmit />
+        <VideoUploadSubmit handleClick={handleClick} />
       </div>
     </div>
   );

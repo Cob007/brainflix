@@ -25,10 +25,10 @@ const Videos = () => {
       const getVideosURL = `${baseURL}videos?api_key=${apiKey}`;
       const res = await axios.get(getVideosURL).then((result) => {
         setVideosData((prev) => result.data);
-        if(videoId !== undefined){
-            getVideosDetails(videoId)
-        }else {
-            getVideosDetails(result.data[0].id);
+        if (videoId !== undefined) {
+          getVideosDetails(videoId);
+        } else {
+          getVideosDetails(result.data[0].id);
         }
       });
     } catch (err) {}
@@ -38,17 +38,16 @@ const Videos = () => {
     loadVideosFromRemote();
   }, [videoId]);
 
-
-  return selectedVideo === undefined ? (
-    <></>
-  ) : (
-    <div className="container">
-      <PlayNow videoClicked={selectedVideo} />
-      <CommentDespNextVideo
-        videos={videosData}
-        videoDetails={selectedVideo}
-      />
-    </div>
+  return (
+    selectedVideo && (
+      <main className="container">
+        <PlayNow videoClicked={selectedVideo} />
+        <CommentDespNextVideo
+          videos={videosData}
+          videoDetails={selectedVideo}
+        />
+      </main>
+    )
   );
 };
 
