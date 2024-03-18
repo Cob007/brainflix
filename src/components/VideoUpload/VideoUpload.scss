@@ -1,0 +1,55 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.video-upload {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+  @include desktop {
+    width: 80vw;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__divider {
+    display: none;
+    @include tablet {
+        display: flex;
+        height: 1px;
+        background-color: $secondary-color-mercury;
+    }
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__left {
+    @include tablet {
+      width: 40vw;
+    }
+
+    @include desktop {
+      width: 40%;
+    }
+  }
+
+  &__right {
+    @include desktop {
+      width: 70%;
+      padding: 0 24px;
+    }
+  }
+
+  &__button {
+    @include desktop {
+      width: 100%;
+    }
+  }
+}

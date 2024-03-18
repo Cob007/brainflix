@@ -1,0 +1,43 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variable" as *;
+
+.cont-form-upload {
+  display: flex;
+  flex-direction: column;
+  &__title-div,
+  &__desp-div {
+    display: flex;
+    flex-direction: column;
+    margin: 12px 0;
+  }
+
+  &__label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $primary-color-silver;
+  }
+
+  &__title,
+  &__desp {
+    display: flex;
+    padding: 16px;
+    border: 1px solid $primary-color-silver;
+    border-radius: 10px;
+    height: 40px;
+    margin: 8px 0;
+    background-color: $secondary-color-alabaster;
+  }
+
+  &__title::placeholder , &__desp::placeholder{
+    font-size: 1rem;
+    font-family: "Avenir";
+    font-weight: 400;
+    color: $secondary-color-darkblack;
+  }
+
+  &__desp {
+    height: 90px;
+    justify-content: flex-start;
+
+  }
+}

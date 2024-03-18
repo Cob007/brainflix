@@ -1,30 +1,20 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Videos from "./pages/Videos/Videos";
+import UploadVideo from "./pages/UploadVideo/UploadVideo";
 import Header from "./components/Header/Header";
-import videos from "./data/videos.json";
-import videoDetails from "./data/video-details.json";
-import PlayNow from "./components/PlayNow/PlayNow";
-import { useState } from "react";
-import CommentDespNextVideo from "./components/CommentDespNextVideo/CommentDespNextVideo";
 
 const App = () => {
-  const [selectedVideo, setSelectedVideo] = useState(videoDetails[0]);
-  const handleClick =  (videoId) => {
-    const selectVideo =  videoDetails.find(
-      (video) => video.id === videoId
-    );
-    setSelectedVideo((prev) => selectVideo);
-  };
 
   return (
-    <div className="container">
+    <BrowserRouter >
       <Header />
-      <PlayNow videoClicked={selectedVideo} />
-      <CommentDespNextVideo
-        videos={videos}
-        videoDetails={selectedVideo}
-        handleClick={handleClick}
-      />
-    </div>
+      <Routes>
+        <Route path="/" element={<Videos />}/>
+        <Route path="/videos/:videoId" element={<Videos />}/>
+        <Route path="/upload" element={<UploadVideo/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
