@@ -1,8 +1,10 @@
 import { Link, NavLink, Navigate } from "react-router-dom";
 import "./NextVideoCard.scss";
+import { baseURL } from "../../common/Common";
 
 const NextVideoCard = (props) => {
   const { video } = props;
+  const imgUrl = baseURL + video.image
 
   return (
     <NavLink className="navlink" to={`/videos/${video.id}`}>
@@ -10,7 +12,7 @@ const NextVideoCard = (props) => {
         <div className="card__img-container">
           <img
             className="card__img"
-            src={video.image}
+            src={imgUrl}
             alt="video placeholder image"
           />
         </div>
