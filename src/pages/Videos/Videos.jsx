@@ -1,10 +1,9 @@
 import CommentDespNextVideo from "../../components/CommentDespNextVideo/CommentDespNextVideo";
-import Header from "../../components/Header/Header";
 import PlayNow from "../../components/PlayNow/PlayNow";
 import { useEffect, useState } from "react";
 import { baseURL, apiKey } from "../../common/Common";
 import axios from "axios";
-import { Navigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Videos = () => {
   const [videosData, setVideosData] = useState([]);
@@ -16,8 +15,11 @@ const Videos = () => {
     try {
       const getVideosDetailsURL = `${baseURL}videos/${videoId}?api_key=${apiKey}`;
       const res = await axios.get(getVideosDetailsURL);
+      console.log(res)
       setSelectedVideo((prev) => res.data);
-    } catch (err) {}
+    } catch (err) {
+      
+    }
   };
 
   const loadVideosFromRemote = async () => {
@@ -31,7 +33,9 @@ const Videos = () => {
           getVideosDetails(result.data[0].id);
         }
       });
-    } catch (err) {}
+    } catch (err) {
+
+    }
   };
 
   useEffect(() => {

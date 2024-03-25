@@ -3,14 +3,38 @@ import VideoUploadForm from "../VideoUploadForm/VideoUploadForm";
 import VideoUploadSubmit from "../VideoUploadSubmit/VideoUploadSubmit";
 import VideoUploadThumbnail from "../VideoUploadThumbnail/VideoUploadThumbnail";
 import "./VideoUpload.scss";
+import { useState } from "react";
+import axios from "axios";
+import { baseURL } from "../../common/Common";
 
 const VideoUpload = () => {
 
   const  navigate  = useNavigate()
 
-  const handleClick = () => {
-    alert("upload!!");
-    navigate('/');
+  const [data, setData] = useState({
+    "channel": 'Local Testing', 
+    "description":'',
+    'title':''
+  })
+
+
+  const handleClick = async () => {
+    console.log("form data: ", data);
+
+    if (!data.description.length>0 && !data.title.length>0){
+      alert("Required field not found");
+      return;
+    }
+    try {
+      const postVideosURL = `${baseURL}videos`;
+      const res = await axios.post(postVideosURL, data);
+      if(res.status === 201 || res.status === 200){
+        alert("upload!!");
+        navigate('/');
+      }
+    }catch (err){
+      console.log()
+    }
   }
 
 
@@ -23,7 +47,7 @@ const VideoUpload = () => {
           <VideoUploadThumbnail />
         </div>
         <div className="video-upload__right">
-          <VideoUploadForm />
+          <VideoUploadForm  setData={setData} />
         </div>
       </div>
       <div className="video-upload__divider" />
